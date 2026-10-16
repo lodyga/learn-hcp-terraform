@@ -1,12 +1,9 @@
-output "instance_hostname" {
-  description = "Private DNS name of the EC2 instance."
-  value       = aws_instance.app_server.private_dns
+output "instance_name" {
+  description = "Name of the created VM"
+  value       = google_compute_instance.vm_instance.name
 }
 
-output "instance_security_group_ids" {
-  value = aws_instance.app_server.vpc_security_group_ids
-}
-
-output "instance_subnet" {
-  value = aws_instance.app_server.subnet_id
+output "instance_external_ip" {
+  description = "External IP address of the VM"
+  value       = google_compute_instance.vm_instance.network_interface[0].access_config[0].nat_ip
 }

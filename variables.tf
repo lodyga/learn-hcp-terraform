@@ -1,11 +1,28 @@
-variable "instance_name" {
-  description = "Value of the EC2 instance's Name tag."
+variable "project_id" {
+  description = "learn-hcp-terraform-511813"
   type        = string
-  default     = "learn-terraform"
+}
+
+variable "region" {
+  description = "Google Cloud region"
+  type        = string
+  default     = "europe-central2"
+}
+
+variable "zone" {
+  description = "Google Cloud zone"
+  type        = string
+  default     = "europe-central2-a"
+}
+
+variable "instance_name" {
+  description = "Name of the VM"
+  type        = string
+  default     = "terraform-instance"
 }
 
 variable "instance_type" {
-  description = "The EC2 instance's type."
+  description = "Google Compute Engine machine type"
   type        = string
-  default     = "t2.micro"
+  default     = "e2-micro"
 }
