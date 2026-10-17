@@ -1,5 +1,5 @@
 output "instance_name" {
-  description = "Name of the created VM"
+  description = "Changed name of the created VM"
   value       = google_compute_instance.vm_instance.name
 }
 
